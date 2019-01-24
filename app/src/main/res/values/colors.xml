@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF4546</color>//FF6061
+    <color name="colorPrimaryDark">#c92627</color>
+    <color name="colorAccent">#ff8340</color>
+    <color name="colorTimer">#7ed877</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorSemiWhite">#80ffffff</color>
+</resources>
