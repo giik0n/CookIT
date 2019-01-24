@@ -204,10 +204,6 @@ public class HomeAdapter extends BaseAdapter {
                 activity.startActivity(intent);
             }
         });
-
-
-
-
         return view;
     }
 }

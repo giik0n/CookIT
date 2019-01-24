@@ -44,9 +44,6 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_home, container, false);
         listView = view.findViewById(R.id.listViewHome);
-        spinner = view.findViewById(R.id.spinnerHome);
-        String[] items = new String[]{"Salads", "Soups", "Pizza", "Pasta", "Beef", "Chicken", "Fruit", "Sushi", "Other..."};
-        spinner.setAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, items));
         listView.setDivider(null);
         listView.setDividerHeight(0);
         
@@ -60,31 +57,32 @@ public class HomeFragment extends Fragment {
 
     private void refreshRecipes() {
 
-        postsRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                arrayList.clear();
-                for (DataSnapshot data : dataSnapshot.getChildren()){
-                    arrayList.add(new Recipe(
-                            data.getKey().toString(),
-                            data.child("description").getValue().toString(),
-                            data.child("fullname").getValue().toString(),
-                            data.child("profileimage").getValue().toString(),
-                            data.child("recipecategory").getValue().toString(),
-                            data.child("recipeimage").getValue().toString(),
-                            data.child("recipeingredients").getValue().toString(),
-                            data.child("recipename").getValue().toString(),
-                            data.child("recipesteps").getValue().toString(),
-                            data.child("uid").getValue().toString()));
-                    adapter.notifyDataSetChanged();
+
+            postsRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    arrayList.clear();
+                    for (DataSnapshot data : dataSnapshot.getChildren()){
+                        arrayList.add(new Recipe(
+                                data.getKey().toString(),
+                                data.child("description").getValue().toString(),
+                                data.child("fullname").getValue().toString(),
+                                data.child("profileimage").getValue().toString(),
+                                data.child("recipecategory").getValue().toString(),
+                                data.child("recipeimage").getValue().toString(),
+                                data.child("recipeingredients").getValue().toString(),
+                                data.child("recipename").getValue().toString(),
+                                data.child("recipesteps").getValue().toString(),
+                                data.child("uid").getValue().toString()));
+                        adapter.notifyDataSetChanged();
+                    }
                 }
-            }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
 
-            }
-        });
+                }
+            });
         adapter = new HomeAdapter(getActivity(),arrayList);
         listView.setAdapter(adapter);
     }
