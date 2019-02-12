@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.babylon.alex.cookit">
+    package="com.example.yana.cookit">
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -21,7 +21,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,31 +30,35 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SettingsActivity"
-            android:label="Settings" />
-        <activity
             android:name=".LoginActivity"
-            android:label="Sign In" />
+            android:label="@string/signIn"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".SignUpActivity"
-            android:label="Sign Up" />
+            android:label="@string/signUp"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".ProfileActivity"
-            android:label="Profile" />
+            android:label="@string/profile"
+            android:screenOrientation="portrait"/>
         <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
         <activity
             android:name=".AddRecipe"
-            android:label="Add recipe" />
+            android:label="@string/addRecipe"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".AddStepsActivity"
-            android:label="Add steps" />
+            android:label="@string/addSteps"
+            android:screenOrientation="portrait"/>
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".ShowRecipeActivity" />
-        <activity android:name=".pojo.CookingActivity"></activity>
+        <activity android:name=".ShowRecipeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".pojo.CookingActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

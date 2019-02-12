@@ -8,17 +8,17 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:411514193480:android:e307b8a598a86ac5",
+        "mobilesdk_app_id": "1:411514193480:android:008904fad9c38ab5",
         "android_client_info": {
-          "package_name": "com.babylon.alex.cookit"
+          "package_name": "com.example.yana.cookit"
         }
       },
       "oauth_client": [
         {
-          "client_id": "411514193480-eg7csm6m3e85ld1qldg7hgu6iqth85uv.apps.googleusercontent.com",
+          "client_id": "411514193480-9dnqvtbcleova0vog84ej9qpb5jhcp6r.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.babylon.alex.cookit",
+            "package_name": "com.example.yana.cookit",
             "certificate_hash": "e5d69cd4105fee19d100789960f0e818646cf8d2"
           }
         },

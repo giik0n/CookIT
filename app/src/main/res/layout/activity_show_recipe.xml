@@ -89,7 +89,7 @@
     </ScrollView>
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/saveRecipeStartCooking"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginBottom="8dp"
